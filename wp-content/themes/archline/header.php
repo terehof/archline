@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Main</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/icon_menu_animate.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="bower_components/walkway/walkway.min.js"></script>
-    <script src="js/svg-animate.js"></script>
-    <script src="js/icon_menu_animate.js" type="text/javascript"></script>
-    <script src="js/main.js"></script>
+    <title><?php bloginfo('name'); wp_title(); ?></title>
 
     <? wp_head(); ?>
 </head>
 <body class="main">
+
+<nav class="menu">
+    <div class="menu-tabs">
+        <div class="menu-tabs-item main-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(10); ?>">Главная</a></div>
+        <div class="menu-tabs-item about-us-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(7); ?>">О нас</a></div>
+        <div class="menu-tabs-item projects-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(16); ?>">Проекты</a></div>
+        <div class="menu-tabs-item contacts-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(4); ?>">Контакты</a></div>
+    </div>
+    <div class="menu-line">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
+            <img src="<? bloginfo('template_url'); ?>/images/logo.png" alt="">
+        </a>
+        <div class="menu-button closed" id="nav-icon2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
