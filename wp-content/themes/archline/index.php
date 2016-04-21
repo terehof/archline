@@ -57,6 +57,7 @@
             <img src="<? bloginfo('template_url'); ?>/images/name.png" alt="ARCHLINE" class="name">
             <ul class="main-links">
                 <?php
+
                 $terms = get_terms('category');
                 $count = count($terms);
                 if($count > 0){
