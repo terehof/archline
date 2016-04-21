@@ -13,7 +13,7 @@
     <div class="menu-tabs">
         <div class="menu-tabs-item main-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(10); ?>">Главная</a></div>
         <div class="menu-tabs-item about-us-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(7); ?>">О нас</a></div>
-        <div class="menu-tabs-item projects-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(16); ?>">Проекты</a></div>
+        <div class="menu-tabs-item projects-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_category_link(3); ?>">Проекты</a></div>
         <div class="menu-tabs-item contacts-bg col-md-3 col-sm-6 col-xs-12"><a href="<?php echo get_page_link(4); ?>">Контакты</a></div>
     </div>
     <div class="menu-line">

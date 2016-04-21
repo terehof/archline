@@ -26,6 +26,89 @@ function load_style_script () {
 add_action('wp_enqueue_scripts', 'load_style_script');
 
 
+add_action('customize_register', function($customizer){
+	$customizer->add_section(
+		'example_section_one',
+		array(
+			'title' => 'Страница контакты',
+			'priority' => 11,
+		)
+	);
+	$customizer->add_setting(
+		'work_hours',
+		array('default' => '')
+	);
+	$customizer->add_control(
+		'work_hours',
+		array(
+			'label' => 'Рабочие часы',
+			'section' => 'example_section_one',
+			'type' => 'textarea',
+		)
+	);
+
+	$customizer->add_setting(
+		'contacts',
+		array('default' => '')
+	);
+	$customizer->add_control(
+		'contacts',
+		array(
+			'label' => 'Контакты',
+			'section' => 'example_section_one',
+			'type' => 'textarea',
+		)
+	);
+
+	$customizer->add_setting(
+		'address',
+		array('default' => '')
+	);
+	$customizer->add_control(
+		'address',
+		array(
+			'label' => 'Адрес',
+			'section' => 'example_section_one',
+			'type' => 'textarea',
+		)
+	);
+
+
+
+	$customizer->add_section(
+		'footer',
+		array(
+			'title' => 'Футер',
+			'priority' => 11,
+		)
+	);
+	$customizer->add_setting(
+		'copyright',
+		array('default' => '')
+	);
+	$customizer->add_control(
+		'copyright',
+		array(
+			'label' => 'Текст копирайта',
+			'section' => 'footer',
+			'type' => 'textarea',
+		)
+	);
+	$customizer->add_setting(
+		'footer_contacts',
+		array('default' => '')
+	);
+	$customizer->add_control(
+		'footer_contacts',
+		array(
+			'label' => 'Контакты в футере',
+			'section' => 'footer',
+			'type' => 'textarea',
+		)
+	);
+});
+
+
 
 //add_action('init', 'projects');
 //function projects() {

@@ -58,6 +58,7 @@
             <ul class="main-links">
                 <?php
 
+
                 $terms = get_terms('category');
                 $count = count($terms);
                 if($count > 0){

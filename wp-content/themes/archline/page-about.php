@@ -23,84 +23,65 @@ Template Name: about-us
         <div class="row">
             <div class="col-md-6">
                 <div class="description-about col-md-12">
-                    <h3>Заголовок</h3>
-                    <p>
-                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur.
-                    </p>
-
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                        quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt.
-
-                    </p>
+                    <?php $title1 = get_field('title_1');
+                    if($title1) { ?>
+                        <h3><?php echo $title1; ?></h3>
+                    <?php } ?>
+                    <?php $text1 = get_field('text_1');
+                    if($text1) { ?>
+                        <?php echo $text1; ?>
+                    <?php } ?>
                 </div>
                 <div class="description-about col-md-12">
-                    <h3>Заголовок</h3>
-                    <p>
-                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur.
-                    </p>
-
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                        quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt.
-
-                    </p>
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                        quae ab illo inventore veritatis et quasi architecto beatae vitae
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione voluptatem sequi nesciunt.
-
-                    </p>
+                    <?php $title2 = get_field('title_2');
+                    if($title2) { ?>
+                        <h3><?php echo $title2; ?></h3>
+                    <?php } ?>
+                    <?php $text2 = get_field('text_2');
+                    if($text2) { ?>
+                        <?php echo $text2; ?>
+                    <?php } ?>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="image-about">
                         <div>
-                            <img src="<? bloginfo('template_url'); ?>/images/author.jpg" alt="">
+                            <?php $photo1 = get_field('photo_1');
+                            if($photo1) { ?>
+                                <img src="<?php echo $photo1; ?>" alt="">
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="info text-right">
-                        <h4>
-                            Имя Фамилия
-                        </h4>
-                        <p class="position">
-                            Должность
-                        </p>
+                        <?php $name1 = get_field('name_1');
+                        if($name1) { ?>
+                            <h4><?php echo $name1; ?></h4>
+                        <?php } ?>
+                        <?php $position1 = get_field('position_1');
+                        if($position1) { ?>
+                            <p class="position"><?php echo $position1; ?></p>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="image-about">
                         <div>
-                            <img src="<? bloginfo('template_url'); ?>/images/author2.jpg" alt="">
+                            <?php $photo2 = get_field('photo_2');
+                            if($photo2) { ?>
+                                <img src="<?php echo $photo2; ?>" alt="">
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="info text-right">
-                        <h4>
-                            Имя Фамилия
-                        </h4>
-                        <p class="position">
-                            Должность
-                        </p>
+                        <?php $name2 = get_field('name_2');
+                        if($name2) { ?>
+                            <h4><?php echo $name2; ?></h4>
+                        <?php } ?>
+                        <?php $position2 = get_field('position_2');
+                        if($position2) { ?>
+                            <p class="position"><?php echo $position2; ?></p>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -108,10 +89,10 @@ Template Name: about-us
     </div>
     <footer class="clearfix">
         <div class="text-left col-sm-6 col-md-6">
-            © 2016 ArchLine.Все права защищены.
+            <?php echo get_theme_mod('copyright', ''); ?>
         </div>
         <div class="text-right col-sm-6 col-md-6">
-            +7 000 000 0000 / archline@info.com
+            <?php echo get_theme_mod('footer_contacts', ''); ?>
         </div>
     </footer>
 </div>

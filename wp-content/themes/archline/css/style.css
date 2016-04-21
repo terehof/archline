@@ -278,6 +278,7 @@ polyline {
 .project-item {
     height: 300px;
     background-size: cover;
+    background-position: center center;
 }
 
 .project-item h3 {
@@ -405,6 +406,8 @@ polyline {
 }
 
 .header-list {
+    display: inline-block;
+    float: right;
     margin: 0px;
     padding: 0;
     list-style: none;
@@ -414,11 +417,13 @@ polyline {
 .header-list li {
     float: left;
     height: 100%;
-    margin-left: 3%;
+    /*margin-left: 3%;*/
+    margin-left: 35px;
 }
 
 .header-list.projects li {
-    float: right;
+    float: left;
+    /*float: right;*/
 }
 .header-list.projects li.slash:last-child {
     display: none;
@@ -618,14 +623,24 @@ li p {
 .link.link-back:hover {
     background-image: url('../images/arrow-left-yellow.png');
 }
-
-.link.link-forvard {
+.forvard-div > a {
+    line-height: 25px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    height: 100%;
+    display: block;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 25px 0;
     padding-right: 80px;
     background: url('../images/arrow-right.png') no-repeat;
     background-position: calc(100% - 40px) calc(50% - 3px);
 }
 
-.link.link-forvard:hover {
+.forvard-div > a:hover {
+    color: #ffd040;
+    text-decoration: none;
     background-image: url('../images/arrow-right-yellow.png');
 }
 
@@ -892,6 +907,7 @@ body {
     }
     .header-list li {
         height: 25px;
+        float: right;
     }
     .header-list li:nth-child(2n){
         display: none;

@@ -20,10 +20,7 @@ Template Name: contacts
                             <h4>рабочие часы</h4>
                         </li>
                         <li>
-                            пн-пт: 9:00 - 18:00
-                        </li>
-                        <li>
-                            сб: 9:00 - 15:00
+                            <?php echo get_theme_mod('work_hours', ''); ?>
                         </li>
                     </ul>
                 </div>
@@ -33,10 +30,7 @@ Template Name: contacts
                             <h4>контакты</h4>
                         </li>
                         <li>
-                            +7 000 000 0000
-                        </li>
-                        <li>
-                            arcline@info.com
+                            <?php echo get_theme_mod('contacts', ''); ?>
                         </li>
                     </ul>
                 </div>
@@ -48,10 +42,7 @@ Template Name: contacts
                             </h4>
                         </li>
                         <li>
-                            119270, Россия, Москва,
-                        </li>
-                        <li>
-                            Улица 00, офис 00
+                            <?php echo get_theme_mod('address', ''); ?>
                         </li>
                     </ul>
                 </div>
@@ -68,10 +59,10 @@ Template Name: contacts
     </div>
     <footer class="clearfix">
         <div class="text-left col-sm-6 col-md-6">
-            © 2016 ArchLine.Все права защищены.
+            <?php echo get_theme_mod('copyright', ''); ?>
         </div>
         <div class="text-right col-sm-6 col-md-6">
-            +7 000 000 0000 / archline@info.com
+            <?php echo get_theme_mod('footer_contacts', ''); ?>
         </div>
     </footer>
 </div>
