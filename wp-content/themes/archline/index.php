@@ -56,9 +56,19 @@
         <div class="menu-logo">
             <img src="<? bloginfo('template_url'); ?>/images/name.png" alt="ARCHLINE" class="name">
             <ul class="main-links">
-                <li><a href="#">Архитектура</a></li>
-                <li><a href="#">Дизайн</a></li>
-                <li><a href="#">Проектирование</a></li>
+                <?php
+                $terms = get_terms('category');
+                $count = count($terms);
+                if($count > 0){
+                    foreach ($terms as $term) {
+                        if ($term->term_id != 1) {
+                            echo '<li><a href="'.get_category_link( $term->term_id ).'">'.$term->name.'</a></li>';
+                        }
+
+
+                    }
+                }
+                ?>
             </ul>
         </div>
     </div>

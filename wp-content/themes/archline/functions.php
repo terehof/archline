@@ -3,7 +3,7 @@ if (function_exists('add_theme_support')) {
 	add_theme_support('menus');
 }
 ?>
-<?
+<?php
 /***
  *  downloadable styles and scripts
  **/
@@ -26,61 +26,59 @@ function load_style_script () {
 add_action('wp_enqueue_scripts', 'load_style_script');
 
 
-/***
- * slider
- **/
-add_action('init', 'projects');
-function projects() {
-	add_theme_support( 'post-thumbnails' );
-	register_post_type('projects', array(
-		'public' => true,
-		'supports' => array('title'),
-		'labels' => array(
-			'name' => 'Проекты',
-			'all_items' => 'Все проекты',
-			'singular_name' => 'проект',
-			'add_new' => 'Добавить проект',
-			'add_new_item' => 'Добавление нового проекта',
-			'not_found' => 'Проекты не найдены.'
-		),
-		'menu_icon' => 'dashicons-format-gallery',
-		'menu_position' => 21
-	));
-}
+
+//add_action('init', 'projects');
+//function projects() {
+//	add_theme_support( 'post-thumbnails' );
+//	register_post_type('projects', array(
+//		'public' => true,
+//		'supports' => array('title'),
+//		'labels' => array(
+//			'name' => 'Проекты',
+//			'all_items' => 'Все проекты',
+//			'singular_name' => 'проект',
+//			'add_new' => 'Добавить проект',
+//			'add_new_item' => 'Добавление нового проекта',
+//			'not_found' => 'Проекты не найдены.'
+//		),
+//		'menu_icon' => 'dashicons-format-gallery',
+//		'menu_position' => 21
+//	));
+//}
 
 /****
  **  категории
  ****/
-add_action('init', 'create_category_taxonomy');
-function create_category_taxonomy(){
-	// заголовки
-	$labels = array(
-		'name'              => 'Категории',
-		'singular_name'     => 'категория',
-		'search_items'      => 'Поиск категорий',
-		'all_items'         => 'Все категории',
-		'edit_item'         => 'Редактирование категории',
-		'add_new_item'      => 'Добавить категорию',
-		'menu_name'         => 'Категории',
-	);
-	// параметры
-	$args = array(
-		'labels'                => $labels,
-		'public'                => true,
-		'show_in_nav_menus'     => true, // равен аргументу public
-		'show_ui'               => true, // равен аргументу public
-		'show_tagcloud'         => false, // равен аргументу show_ui
-		'hierarchical'          => true,
-		'rewrite'               => true,
-		//'query_var'             => $taxonomy, // название параметра запроса
-		'capabilities'          => array(),
-		'meta_box_cb'           => null, // callback функция. Отвечает за html код метабокса (с версии 3.8): post_categories_meta_box или post_tags_meta_box. Если указать false, то метабокс будет отключен вообще
-		'show_admin_column'     => false, // Позволить или нет авто-создание колонки таксономии в таблице ассоциированного типа записи. (с версии 3.5)
-		'_builtin'              => false,
-		'show_in_quick_edit'    => null, // по умолчанию значение show_ui
-	);
-	register_taxonomy('category', array('projects'), $args );
-}
+//add_action('init', 'create_category_taxonomy');
+//function create_category_taxonomy(){
+//	// заголовки
+//	$labels = array(
+//		'name'              => 'Категории',
+//		'singular_name'     => 'категория',
+//		'search_items'      => 'Поиск категорий',
+//		'all_items'         => 'Все категории',
+//		'edit_item'         => 'Редактирование категории',
+//		'add_new_item'      => 'Добавить категорию',
+//		'menu_name'         => 'Категории',
+//	);
+//	// параметры
+//	$args = array(
+//		'labels'                => $labels,
+//		'public'                => true,
+//		'show_in_nav_menus'     => true, // равен аргументу public
+//		'show_ui'               => true, // равен аргументу public
+//		'show_tagcloud'         => false, // равен аргументу show_ui
+//		'hierarchical'          => true,
+//		'rewrite'               => true,
+//		//'query_var'             => $taxonomy, // название параметра запроса
+//		'capabilities'          => array(),
+//		'meta_box_cb'           => null, // callback функция. Отвечает за html код метабокса (с версии 3.8): post_categories_meta_box или post_tags_meta_box. Если указать false, то метабокс будет отключен вообще
+//		'show_admin_column'     => false, // Позволить или нет авто-создание колонки таксономии в таблице ассоциированного типа записи. (с версии 3.5)
+//		'_builtin'              => false,
+//		'show_in_quick_edit'    => null, // по умолчанию значение show_ui
+//	);
+//	register_taxonomy('category', array('projects'), $args );
+//}
 
 
 

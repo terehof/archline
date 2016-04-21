@@ -420,6 +420,9 @@ polyline {
 .header-list.projects li {
     float: right;
 }
+.header-list.projects li.slash:last-child {
+    display: none;
+}
 
 .header-list li p {
     margin: 0;
