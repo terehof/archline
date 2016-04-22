@@ -54,7 +54,8 @@
             <line fill="none" stroke="#8F8E8E" stroke-miterlimit="10" x1="931.1" y1="819.8" x2="929.5" y2="820.8"/>
             </svg>
         <div class="menu-logo">
-            <img src="<? bloginfo('template_url'); ?>/images/name.png" alt="ARCHLINE" class="name">
+            <img src="<? bloginfo('template_url'); ?>/images/archline_text_big.png" alt="ARCHLINE" class="name image_big">
+            <img src="<? bloginfo('template_url'); ?>/images/archline_text_sm.png" alt="ARCHLINE" class="name image_small">
             <ul class="main-links">
                 <?php
 
