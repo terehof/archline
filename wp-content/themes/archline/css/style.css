@@ -478,7 +478,10 @@ polyline {
     width: 50%;
     float: left;
 }
-
+.project-description > .image-big:first-child {
+    padding-left: 40px;
+    padding-right: 40px;
+}
 .image-big {
     padding: 0 40px;
     margin-bottom: 45px;
@@ -533,7 +536,11 @@ p.animate-line {
 }
 
 .project-description img {
-    width: 100%;
+    display: block;
+    max-height: 100vh;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
 }
 
 .project-description h3 {
