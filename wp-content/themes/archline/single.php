@@ -38,9 +38,9 @@
         <?php $projGoal = get_field('project_goal');
         if($projGoal) { ?>
             <div class="task col-md-7">
-                <h3>
+                <!--<h3>
                     Задача
-                </h3>
+                </h3>-->
                 <p>
                     <?php echo $projGoal; ?>
                 </p>
