@@ -192,6 +192,7 @@ nav.menu.open {
     background-color: #4d4e4e;
     background-size: cover;
     padding: 0px;
+    width: 20% !important;
 }
 
 .menu-tabs-item.main-bg {
@@ -803,7 +804,10 @@ li h4 {
 body {
     background-color: #282828;
 }
-
+.video-block {
+    padding: 0 40px;
+    margin-bottom: 45px;
+}
 /*END*/
 
 /*MEDIA*/

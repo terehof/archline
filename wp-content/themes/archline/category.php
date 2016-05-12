@@ -24,9 +24,10 @@
         <div class="row">
             <?php
                 $cat_id = get_query_var('cat');
-                $args = array( 'category' => $cat_id );
+                $args = array( 'category' => $cat_id, 'numberposts'=>100 );
                 $myposts = get_posts( $args );
-                foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                foreach ( $myposts as $post ) : setup_postdata( $post );?>
+
                     <div class="project-item project1 col-md-3 col-sm-6 col-xs-12" <?php $projPhoto = get_field('project_photo-main'); if($projPhoto) { echo 'style="background-image: url('.$projPhoto.');"'; } ?>>
                         <div class="project-hidden">
                             <a href="<?php the_permalink(); ?>">

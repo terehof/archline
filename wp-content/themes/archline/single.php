@@ -70,6 +70,21 @@
             </ul>
         </div>
         <div class="clearfix"></div>
+
+        <?php
+        if ( have_posts() ) :
+            while ( have_posts() ) :
+                the_post();
+                ?>
+                <div class="video-block">
+                    <?php
+                    the_content();
+                    ?>
+                </div>
+            <?php endwhile;
+        endif;
+        ?>
+
         <?php $projPhotosVert = get_field('project_photo-vertical');
             if($projPhotosVert) { ?>
                 <?php  foreach ($projPhotosVert as $photo) { ?>

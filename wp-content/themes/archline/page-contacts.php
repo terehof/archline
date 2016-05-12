@@ -14,17 +14,17 @@ Template Name: contacts
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="col-md-4">
+                <!--<div class="col-md-4">
                     <ul class="theses">
                         <li class="theses-li">
                             <h4>рабочие часы</h4>
                         </li>
                         <li>
-                            <?php echo get_theme_mod('work_hours', ''); ?>
+                            <?php /*echo get_theme_mod('work_hours', ''); */?>
                         </li>
                     </ul>
-                </div>
-                <div class="col-md-4">
+                </div>-->
+                <div class="col-md-6">
                     <ul>
                         <li class="theses-li">
                             <h4>контакты</h4>
@@ -34,7 +34,7 @@ Template Name: contacts
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <ul>
                         <li class="theses-li">
                             <h4>
@@ -71,13 +71,13 @@ Template Name: contacts
     var map;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map_canvas'), {
-            center: {lat: 46.474723, lng: 30.731276},
-            scrollwheel: false,
+            center: {lat: 55.705340, lng: 37.647892},
+            scrollwheel: true,
             zoom: 15
         });
         var image = '<? bloginfo('template_url'); ?>/images/map-indicate.png';
         var beachMarker = new google.maps.Marker({
-            position: {lat: 46.474723, lng: 30.731276},
+            position: {lat: 55.705340, lng: 37.647892},
             map: map,
             icon: image
         });
@@ -102,13 +102,23 @@ Template Name: contacts
                 stylers: [
                     { visibility: "off" }
                 ]
-            },{
+            },
+            {
                 featureType: 'landscape.man_made',
+                elementType: 'geometry.stroke',
+                stylers: [
+                    {color: "#4A4949"}
+                ]
+            },
+            {
+                featureType: 'landscape.man_made',
+                elementType: 'geometry.fill',
                 stylers: [
                     {color: "#333333"},
                     {saturation: -10}
                 ]
-            },{
+            },
+            {
                 featureType: 'landscape.natural',
                 stylers: [
                     {color: "#6f6a6a"}
